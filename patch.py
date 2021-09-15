@@ -50,7 +50,7 @@ PATCHED_LICENSE = """
     };
 
     """
-patched = licensefactory.replace(EMPTY_LICENSE,PATCHED_LICENSE).replace("LicenseFactory.EMPTY_LICENSE","LicenseFactory.PATCHED_LICENSE").replace(PATCHED_LICENSE,EMPTY_LICENSE+PATCHED_LICENSE)
+patched = licensefactory.replace(EMPTY_LICENSE,EMPTY_LICENSE+PATCHED_LICENSE).replace("LicenseFactory.EMPTY_LICENSE","LicenseFactory.PATCHED_LICENSE")
 f.seek(0)
 f.write(patched)
 f.close()
